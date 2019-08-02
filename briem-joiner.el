@@ -1,4 +1,5 @@
-;;; briem-joiner.el --- Add joins to text     -*- lexical-binding: t -*-
+;; -*- coding: utf-8-unix; lexical-binding: t -*-
+;;; briem-joiner.el --- Add joins to text
 
 ;; Copyright (C) 2019 Helmut Eller
 
@@ -128,3 +129,5 @@
     (goto-char start)
     (while (re-search-forward (briem--join-regexp) end t)
       (replace-match ""))))
+
+(provide 'briem-joiner)
