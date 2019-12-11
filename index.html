@@ -16,27 +16,24 @@
       onkeyup="set_output('input', 'output')"
       id="input" cols="80"
       rows="6">The quick brown fox jumps over the lazy dog.</textarea><br>
-    <!--
-<button onclick="briem_update('input', 'output')">Utextpdate</button>
--->
 
-<label>font-size: <input id=font-size
-			 type=number value=18 min=1 max=999 step=1 size=2
-			 onchange="change_font_size('font-size','output')">
-</label>
-<label>font-style (slant):
-  <select id=font-style onchange="change_font_style('font-style','output')">
-    <option label="normal" value="normal" selected>
-      <!-- <option label="italic" value="italic"> -->
-    <option label="oblique" value="oblique">
-  </select>
-</label>
+    <label>font-size: <input id=font-size type=number value=18 min=1 step=1
+			     onchange="change_font_size('font-size','output')"
+			     style="width:4em">
+    </label>
+    <label>font-style (slant):
+      <select id=font-style
+	      onchange="change_font_style('font-style','output')">
+	<option value=normal selected>normal</option>
+	<!-- <option label="italic" value="italic"> -->
+	<option value=oblique>oblique</option>
+      </select>
+    </label>
+    <hr>
 
-<!-- <<label>font-style <input type=number value=18 min=5 step=1 name=pt></label> -->
-
-<hr>
-    <pre id="output" style="font-family: 'Handwriting'; font-size: 18pt;">
-    </div>
+    <pre id=output style="font-family: 'Handwriting'; 
+			  font-size: 18pt;">
+    </pre>
 </body>
 <script>set_output('input', 'output')</script>
 </html>
