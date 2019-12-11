@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <style>
+    @font-face {
+	font-family: 'Handwriting';
+	src: url('fonts/BriemHandwriting.otf') format('opentype'),
+	     url('fonts/BriemHandwriting.ttf') format('truetype');
+	font-weight: normal;
+    };
+  </style>
+  <script src="briem.js" charset="utf-8">
+  </script>
+  <body>
+    <textarea
+      onkeyup="set_output('input', 'output')"
+      id="input" cols="80"
+      rows="6">The quick brown fox jumps over the lazy dog.</textarea><br>
+    <!--
+<button onclick="briem_update('input', 'output')">Utextpdate</button>
+-->
+
+<label>font-size: <input id=font-size
+			 type=number value=18 min=1 max=999 step=1 size=2
+			 onchange="change_font_size('font-size','output')">
+</label>
+<label>font-style (slant):
+  <select id=font-style onchange="change_font_style('font-style','output')">
+    <option label="normal" value="normal" selected>
+      <!-- <option label="italic" value="italic"> -->
+    <option label="oblique" value="oblique">
+  </select>
+</label>
+
+<!-- <<label>font-style <input type=number value=18 min=5 step=1 name=pt></label> -->
+
+<hr>
+    <pre id="output" style="font-family: 'Handwriting'; font-size: 18pt;">
+    </div>
+</body>
+<script>set_output('input', 'output')</script>
+</html>
