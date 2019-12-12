@@ -46,11 +46,17 @@ function set_output(id1, id2) {
 function change_font_size(id1, id2) {
     let e1 = document.getElementById(id1);
     let e2 = document.getElementById(id2);
-    e2.style.fontSize = e1.value + "pt"
+    e2.style.fontSize = e1.value + "px"
 }
 
 function change_font_style(id1, id2) {
     let e1 = document.getElementById(id1);
     let e2 = document.getElementById(id2);
     e2.style.fontStyle = e1.value;
+}
+
+function change_font_family(id1, id2, f1, f2) {
+    let e1 = document.getElementById(id1);
+    let e2 = document.getElementById(id2);
+    e2.style.fontFamily = (e1.checked ? f2 : f1);
 }

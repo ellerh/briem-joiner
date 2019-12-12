@@ -7,6 +7,13 @@
 	src: url('fonts/BriemHandwriting.otf') format('opentype'),
 	     url('fonts/BriemHandwriting.ttf') format('truetype');
     }
+
+    @font-face {
+	font-family: 'Guidelines';
+	src: url('fonts/BriemHandwritingItalic.otf') format('opentype'),
+	     url('fonts/BriemHandwritingItalic.ttf') format('truetype');
+    }
+
   </style>
   <script src="briem.js" charset="utf-8"></script>
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
@@ -33,9 +40,14 @@
 	  <select id=font-style
 		  onchange="change_font_style('font-style','output')">
 	    <option value=normal selected>normal</option>
-	    <!-- <option label="italic" value="italic"> -->
 	    <option value=oblique>oblique</option>
+	    <!-- <option value=italic>italic</option> -->
 	  </select>
+	</label>
+	<label for=guidelines>guidelines:
+	  <input id=guidelines type=checkbox
+		 onchange="change_font_family('guidelines','output',
+			   'Handwriting','Guidelines')">
 	</label>
       </fieldset>
       <hr>
