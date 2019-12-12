@@ -6,18 +6,19 @@
 	font-family: 'Handwriting';
 	src: url('fonts/BriemHandwriting.otf') format('opentype'),
 	     url('fonts/BriemHandwriting.ttf') format('truetype');
-	font-weight: normal;
-    };
+    }
+    @media only screen and (max-width: 400px) { html { font-size: 60px; } }
   </style>
   <script src="briem.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
   <body onload="set_output('input', 'output');
 		change_font_size('font-size','output');"
-	style="font-size: 25px;">
+	>
     <div>
-    <fieldset style="border:none;">
+    <fieldset class=pure-group>
       <textarea
       onkeyup="set_output('input', 'output')"
-      id="input" style="width:95%;
+      id="input" style="width:98%;
 			display:block; margin-left:auto; margin-right:auto;"
       rows="6">The quick brown fox jumps over the lazy dog.</textarea><br>
 
@@ -28,7 +29,7 @@
 	  onchange="change_font_size('font-size','output')"
 	  style="width:4em;">
       </label>
-      <label for=font-style>slant:<select id=font-style
+      <label for=font-style>slant: <select id=font-style
 		onchange="change_font_style('font-style','output')">
 	  <option value=normal selected>normal</option>
 	  <!-- <option label="italic" value="italic"> -->
