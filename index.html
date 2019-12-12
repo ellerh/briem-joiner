@@ -9,31 +9,34 @@
 	font-weight: normal;
     };
   </style>
-  <script src="briem.js" charset="utf-8">
-  </script>
-  <body>
-    <textarea
+  <script src="briem.js" charset="utf-8"></script>
+  <body onload="set_output('input', 'output');
+		change_font_size('font-size','output');"
+	style="font-size: 25px;">
+    <div>
+    <fieldset style="border:none;">
+      <textarea
       onkeyup="set_output('input', 'output')"
-      id="input" cols="80"
+      id="input" style="width:95%;
+			display:block; margin-left:auto; margin-right:auto;"
       rows="6">The quick brown fox jumps over the lazy dog.</textarea><br>
 
-    <label>font-size: <input id=font-size type=number value=18 min=1 step=1
-			     onchange="change_font_size('font-size','output')"
-			     style="width:4em">
-    </label>
-    <label>font-style (slant):
-      <select id=font-style
-	      onchange="change_font_style('font-style','output')">
-	<option value=normal selected>normal</option>
-	<!-- <option label="italic" value="italic"> -->
-	<option value=oblique>oblique</option>
-      </select>
-    </label>
+      <label for=font-size>size [mm]:
+	<input
+	  id=font-size
+	  type=number value=10 min=1 step=1
+	  onchange="change_font_size('font-size','output')"
+	  style="width:4em;">
+      </label>
+      <label for=font-style>slant:<select id=font-style
+		onchange="change_font_style('font-style','output')">
+	  <option value=normal selected>normal</option>
+	  <!-- <option label="italic" value="italic"> -->
+	  <option value=oblique>oblique</option>
+	</select>
+      </label>
+    </fieldset>
     <hr>
-
-    <pre id=output style="font-family: 'Handwriting'; 
-			  font-size: 18pt;">
-    </pre>
-</body>
-<script>set_output('input', 'output')</script>
+    <pre id=output style="font-family: 'Handwriting';"></pre>
+  </body>
 </html>
