@@ -14,29 +14,31 @@
 		change_font_size('font-size','output');"
 	>
     <div>
-    <fieldset class=pure-group style="border:none;">
-      <textarea
-      onkeyup="set_output('input', 'output')"
-      id="input" style="width:98%;
-			display:block; margin-left:auto; margin-right:auto;"
-      rows="6">The quick brown fox jumps over the lazy dog.</textarea><br>
+      <fieldset class=pure-group style="border:none;">
+	<textarea
+	  onkeyup="set_output('input', 'output')"
+	  id="input" style="width:98%;
+			    display:block; 
+			    margin-left:auto; margin-right:auto;"
+	  rows="6">The quick brown fox jumps over the lazy dog.</textarea><br>
 
-      <label for=font-size>size [px]:
-	<input
-	  id=font-size
-	  type=number value=25 min=1 step=1
-	  onchange="change_font_size('font-size','output')"
-	  style="width:4em;">
-      </label>
-      <label for=font-style>slant: <select id=font-style
-		onchange="change_font_style('font-style','output')">
-	  <option value=normal selected>normal</option>
-	  <!-- <option label="italic" value="italic"> -->
-	  <option value=oblique>oblique</option>
-	</select>
-      </label>
-    </fieldset>
-    <hr>
-    <pre id=output style="font-family: 'Handwriting';"></pre>
+	<label for=font-size>size [px]:
+	  <input
+	    id=font-size
+	    type=number value=35 min=1 step=1
+	    onchange="change_font_size('font-size','output')"
+	    style="width:4em;">
+	</label>
+	<label for=font-style>slant:
+	  <select id=font-style
+		  onchange="change_font_style('font-style','output')">
+	    <option value=normal selected>normal</option>
+	    <!-- <option label="italic" value="italic"> -->
+	    <option value=oblique>oblique</option>
+	  </select>
+	</label>
+      </fieldset>
+      <hr>
+      <pre id=output style="font-family: 'Handwriting';"></pre>
   </body>
 </html>
